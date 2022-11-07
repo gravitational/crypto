@@ -418,7 +418,7 @@ func algoCompatible(algo string, publicKey PublicKey, sig *Signature) bool {
 		return true
 	}
 
-	if publicKey.Type() == CertAlgoRSAv01 && isRSAType(algo) && isRSAType(sig.Format) {
+	if publicKey.Type() == CertAlgoRSAv01 && isRSACertType(algo) && isRSAType(sig.Format) {
 		return true
 	}
 
